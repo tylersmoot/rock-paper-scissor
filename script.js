@@ -94,19 +94,33 @@ for (let i =0; i < 5; i++) {
 }
 
 if (userScore < computerScore) {
-    console.log("computer wins the game");
-    console.log("Computer total wins: " + computerScore);
-    console.log("Your total wins: " + userScore);
-    reset();
+
+    return "computer wins the game";
+
+
+    // logs the score at end of 5 game loop
+    // console.log("Computer total wins: " + computerScore);
+    // console.log("Your total wins: " + userScore);
+    
+    
 }
 else if (userScore > computerScore) {
-    console.log("you win the game");
-    console.log("Computer total wins: " + computerScore);
-    console.log("Your total wins: " + userScore);
-    reset();
-}
+
+    return "you win the game" +"score" + userScore;
+
+    // logs the score at end of 5 game loop
+    // console.log("Computer total wins: " + computerScore);
+    // console.log("Your total wins: " + userScore);
+
 
 }
+
+
+
+}
+
+
+
 
 
 function reset () {
