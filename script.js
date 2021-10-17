@@ -1,5 +1,5 @@
 const options = ["rock", "paper", "scissors"];
-let userSelection = "paper";
+let userSelection;
 let computerAnswer = computerPlay();
 
 
@@ -17,25 +17,66 @@ function computerPlay () {
    
     function playRound(userSelection, computerAnswer) {
         
+     userSelection = prompt("what is your selection? rock, paper, scissors");
+
+
+
         if (userSelection === "paper" && computerAnswer !== "scissors") {
             console.log("you win");
-            console.log(userSelection + "your answer");
-            console.log(computerAnswer + "computer answer");
+
+            console.log(computerAnswer);
+                console.log(userSelection);
+            
+      
         }
-            else if (userSelection ==="rock" && computerAnswer !== "paper") {
-                console.log("computer wins")
+       
+          if (userSelection ==="rock" && computerAnswer !== "paper") {
+                console.log("you win")
+
+                console.log(computerAnswer);
+                console.log(userSelection);
             }
 
-            else if (userSelection === "scissors" && computerAnswer !== "rock") {
+         if (userSelection === "scissors" && computerAnswer !== "rock") {
                 console.log("you win");
-            }
-            
-            
-        } 
-    
-    
-    
 
+                console.log(computerAnswer);
+                console.log(userSelection);
+            }
+
+         if (computerAnswer === "paper" && userSelection !== "scissors") {
+               console.log("computer wins");
+
+               console.log(computerAnswer);
+                console.log(userSelection);
+
+            }
+
+         if (computerAnswer === "rock" && userSelection !== "paper") {
+                console.log("computer wins");
+
+                console.log(computerAnswer);
+                console.log(userSelection);
+            }
+
+         if (computerAnswer === "scissors" && userSelection !== "rock") {
+                console.log("computer wins");
+
+                console.log(computerAnswer);
+                console.log(userSelection);
+            }
+
+            if (computerAnswer === userSelection && userSelection === computerAnswer) {
+                console.log("tie, play again");
+
+                console.log(computerAnswer);
+                console.log(userSelection);
+            } 
+            
+        }
+    
+    
+ 
     
 
 
