@@ -15,11 +15,22 @@ function computerPlay () {
     };
 
    
-    function playRound(userSelection, computerAnswer) {
+
+
+
+function playRound(userSelection, computerAnswer) {
         
      userSelection = prompt("what is your selection? rock, paper, scissors");
 
 
+
+     if (computerAnswer === userSelection && userSelection === computerAnswer) {
+        console.log("tie, play again");
+
+        console.log(computerAnswer);
+        console.log(userSelection);
+    } 
+  
 
         if (userSelection === "paper" && computerAnswer !== "scissors") {
             console.log("you win");
@@ -31,7 +42,7 @@ function computerPlay () {
         }
        
           if (userSelection ==="rock" && computerAnswer !== "paper") {
-                console.log("you win")
+                console.log("you win");
 
                 console.log(computerAnswer);
                 console.log(userSelection);
@@ -66,15 +77,10 @@ function computerPlay () {
                 console.log(userSelection);
             }
 
-            if (computerAnswer === userSelection && userSelection === computerAnswer) {
-                console.log("tie, play again");
-
-                console.log(computerAnswer);
-                console.log(userSelection);
-            } 
+          
             
         }
-    
+     
     
  
     
