@@ -1,0 +1,15 @@
+.container {
+
+display: flex;
+flex: 0 1 0%;
+justify-content: space-evenly;
+
+}
+
+.scoreContainer {
+    
+display: flex;
+flex-direction: column;
+
+}
+
