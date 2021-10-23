@@ -1,12 +1,4 @@
 const options = ["rock", "paper", "scissors"];
-<<<<<<< HEAD
-let userSelection = "rock";
-let computerAnswer = computerPlay();
-computerScore = 0;
-userScore = 0;
-const maxScore = 5;
-let result = userSelection.localeCompare(computerAnswer);
-=======
 let userSelection;
 computerScore = 0;
 userScore = 0;
@@ -24,7 +16,6 @@ let winnerText = document.getElementById("winner");
 
 
 
->>>>>>> rps-ui
 
 
 
@@ -42,39 +33,6 @@ function computerPlay () {
   
 
 
-<<<<<<< HEAD
-function playRound(userSelection, computerAnswer) {
-
-    if (result === 0 === true) {
-        console.log("tie");
-        return;
-        }   
-   
-        
-if (userSelection === "rock" && computerAnswer !== "paper") {
-    console.log("You win");
-    userScore++;
-    return;
-}
-   
-    else if (userSelection === "paper" && computerAnswer !== "scissors") {
-        console.log("You win");
-        userScore++;
-        return;
-    }
-       else if (userSelection === "scissors" && computerAnswer !== "rock") {
-           console.log("You win");
-           userScore++;
-           return;
-       }
-          
-
-            else {
-                console.log("Computer wins");
-                computerScore++;
-                return;
-            }
-=======
 
     
 
@@ -84,20 +42,11 @@ if (userSelection === "rock" && computerAnswer !== "paper") {
 
 function playRound(userSelection, computerAnswer) {
 
->>>>>>> rps-ui
   
 };
 
 
 
-<<<<<<< HEAD
-           
-
-        
-
-
-        
-=======
    computerPlay();
 
    if (computerAnswer == userSelection) {
@@ -158,31 +107,20 @@ function playRound(userSelection, computerAnswer) {
   
 } 
 
->>>>>>> rps-ui
 
 
 
 
-<<<<<<< HEAD
-=======
 let computerChoice = document.querySelector("#computerChoice");
 let computerCounter = document.querySelector("#computerCounter");
 let playerCounter = document.querySelector("#playerCounter");
 
->>>>>>> rps-ui
 
 
 
 
 
 
-<<<<<<< HEAD
-
-// function game () {
-
-
-//         playRound(userSelection, computerAnswer); 
-=======
 buttons.forEach((button) => {
     
 
@@ -195,50 +133,27 @@ buttons.forEach((button) => {
         computerCounter.textContent = computerScore;
         playerCounter.textContent = userScore;
 
->>>>>>> rps-ui
 
         
         winnerText.textContent = `${winner} wins the round`;
         
 
 
-<<<<<<< HEAD
-// if (userScore < computerScore) {
-
-//     return "computer wins the game";
-
-     
-// }
-
-//    else if (userScore > computerScore) {
-=======
    
 });
 
 
 });
 
->>>>>>> rps-ui
 
 //       return "you win the game," +"your score is : " + userScore;
 
 
-<<<<<<< HEAD
-// }
-
-=======
->>>>>>> rps-ui
 
 
 
 
 
-<<<<<<< HEAD
-function reset () {
-
-    userScore = 0;
-    computerScore = 0;
-=======
   btnPaper.addEventListener("click", () => {
     userSelection = "paper";
      console.log("you clicked paper");
@@ -253,7 +168,6 @@ function reset () {
          userSelection = "scissors";
           console.log("you clicked scissors")
 })
->>>>>>> rps-ui
 
 };
 
