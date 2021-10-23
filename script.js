@@ -8,6 +8,8 @@ let buttons = document.querySelectorAll("button");
 let btnRock = document.querySelector("#rock");
 let btnPaper = document.querySelector("#paper");
 let btnScissors = document.querySelector("#scissors");
+let winner;
+let winnerText = document.getElementById("winner");
 
 
 
@@ -21,10 +23,10 @@ let btnScissors = document.querySelector("#scissors");
 function computerPlay () {
 
     let computerAnswer = Math.floor(Math.random() * options.length);
-    
+     
       return options[computerAnswer];
 
-        //  computerAnswer = options[computerAnswer];    
+         computerAnswer = options[computerAnswer];    
         
     };
 
@@ -42,27 +44,36 @@ function playRound(userSelection, computerAnswer) {
 
   
 
-    
-    
-    computerPlay();
 
-   
+   computerPlay();
+
+   if (computerAnswer == userSelection) {
+       console.log("tie");
+       return;
+   }
+      if(userSelection === computerAnswer) {
+          console.log("tie");
+          return;
+      }
 
 
    if (computerAnswer === "rock" && userSelection !== "paper") {
     console.log("Computer wins");
     computerScore++;
+    winner = "Computer";
     
 }
    
      else if (computerAnswer === "paper" && userSelection !== "scissors") {
         console.log("Computer wins");
         computerScore++;
+        winner = "Computer";
         
     }
        else if (computerAnswer === "scissors" && userSelection !== "rock") {
            console.log("Computer wins");
            computerScore++;
+           winner = "Computer";
            
        }
            
@@ -70,19 +81,29 @@ function playRound(userSelection, computerAnswer) {
             else  if (userSelection === "rock" && computerAnswer !== "paper") {
                 console.log("You win");
                 userScore++;
+                winner = "Player";
                 
             }
                else if (userSelection === "paper" && computerAnswer !== "scissors") {
                    console.log("you win");
                    userScore++;
+                   winner = "Player";
                }
                 else if(userSelection === "scissors" && computerAnswer !== "rock") {
                     console.log("you win");
                     userScore++;
+                    winner = "Player";
                 }
+
+                    if(userScore  === 5) {
+                        endGame();
+                    }
+                       else if(computerScore === 5) {
+                           endGame();
+                       }
           
   
-};
+} 
 
 
 
@@ -109,8 +130,11 @@ buttons.forEach((button) => {
         computerChoice.textContent = computerAnswer;
         computerCounter.textContent = computerScore;
         playerCounter.textContent = userScore;
-        
 
+
+        
+        winnerText.textContent = `${winner} wins the round`;
+        
 
 
    
@@ -142,6 +166,35 @@ buttons.forEach((button) => {
           console.log("you clicked scissors")
 })
 
+
+
+
+
+
+let reset = document.getElementById("reset");
+
+reset.addEventListener("click", () => {
+    btnPaper.disabled = false;
+    btnRock.disabled = false;
+    btnScissors.disabled = false;
+    playerCounter.textContent = 0;
+    computerCounter.textContent = 0;
+    computerChoice.textContent = "";
+    winnerText.textContent = "";
+    
+})
+
+
+
+
+
+
+function endGame() {
+    btnPaper.disabled = true;
+    btnRock.disabled = true;
+    btnScissors.disabled = true;
+
+}
 
 
 
